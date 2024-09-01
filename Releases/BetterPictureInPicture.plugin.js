@@ -1,7 +1,7 @@
 /**
  * @name BetterPictureInPicture
  * @description Simple plugin that allows you to resize the picture-in-picture popup using the mouse wheel and the settings.
- * @version 0.0.6
+ * @version 0.0.7
  * @author nik9
  * @authorId 241175583709593600
  * @authorLink https://megaworld.space
@@ -42,7 +42,7 @@ const config = {
                 github_username: "nik9play"
             }
         ],
-        version: "0.0.6",
+        version: "0.0.7",
         description: "Simple plugin that allows you to resize the picture-in-picture popup using the mouse wheel and the settings.",
         authorLink: "https://megaworld.space",
         paypalLink: "https://vk.com/app6887721_-197274096",
@@ -50,6 +50,12 @@ const config = {
         github_raw: "https://raw.githubusercontent.com/nik9play/BetterDiscordPlugins/main/Releases/BetterPictureInPicture.plugin.js"
     },
     changelog: [
+        {
+            title: "Fixes",
+            items: [
+                "Fixed width when resizing"
+            ]
+        },
         {
             title: "Fixes",
             items: [
@@ -178,7 +184,7 @@ module.exports = !global.ZeresPluginLibrary ? Dummy : (([Plugin, Api]) => {
       }
 
       BdApi.injectCSS('betterpictureinpicturecss-animation', `div[class^="pictureInPictureVideo_"] {transition: width .2s cubic-bezier(0.65,0.05,0.36,1), height .2s cubic-bezier(0.65,0.05,0.36,1);}`)
-      BdApi.injectCSS('betterpictureinpicturecss', `div[class^="pictureInPictureVideo_"] {width: var(--bpip-width);height:var(--bpip-height)!important}`)
+      BdApi.injectCSS('betterpictureinpicturecss', `div[class^="pictureInPictureVideo_"] {width: var(--bpip-width);height:var(--bpip-height)!important} div[class^="pictureInPictureWindow_"] > div {width: unset !important;}`)
 
       DOMTools.observer.subscribe(changes => {
         if (changes.addedNodes.length > 0) {

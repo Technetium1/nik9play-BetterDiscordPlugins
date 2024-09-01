@@ -7,7 +7,7 @@
       "discord_id": "241175583709593600",
       "github_username": "nik9play"
     }],
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Simple plugin that allows you to resize the picture-in-picture popup using the mouse wheel and the settings.",
     "authorLink": "https://megaworld.space",
     "paypalLink": "https://vk.com/app6887721_-197274096",
@@ -15,6 +15,7 @@
     "github_raw": "https://raw.githubusercontent.com/nik9play/BetterDiscordPlugins/main/Releases/BetterPictureInPicture.plugin.js"
   },
   "changelog": [
+    {"title": "Fixes", "items": ["Fixed width when resizing"]},
     {"title": "Fixes", "items": ["Updated selector, general maintenance"]},
     {"title": "Fixes", "items": ["Updated selectors for new Discord update"]},
     {"title": "Fixes", "items": ["Fix aspect ratio and tweak animation speed."]},
